@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Crustora Bakery</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <a href="index.html" style="position: absolute; top: 2rem; left: 2rem; text-decoration: none; color: var(--accent-dark); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; z-index: 10;">
+        ← Back to Bakery
+    </a>
+
+    <main class="auth-card">
+        <a href="index.html" class="logo" style="margin-bottom: 2rem;"><img src="assets/images/logo.png" alt="Crustora Logo"></a>
+        <h2>Join the Family</h2>
+        <p>Create an account to start earning sweet rewards.</p>
+
+        <form id="signupForm" class="auth-form">
+            <div id="emailStep">
+                <div style="margin-bottom: 1rem;">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Jane Doe" required>
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+
+            <div id="otpStep" style="display: none;">
+                <label for="otp">6-Digit Code</label>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.5rem;">We've sent a secure code to your email.</p>
+                <input type="text" id="otp" placeholder="123456" maxlength="6" pattern="\d{6}">
+            </div>
+            
+            <button type="submit" id="authSubmitBtn" class="btn primary">Continue with Email</button>
+        </form>
+
+        <div class="auth-footer">
+            Already have an account? <a href="signin.html">Sign In</a>
+        </div>
+    </main>
+
+    <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crustora Bakery | Sweet Delights</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Crustora Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+        </ul>
+        <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div id="authContainer" style="display: flex; gap: 1rem; align-items: center;">
+                <a href="signin.html" class="btn secondary" id="navSignInBtn" style="text-decoration: none;">Sign In</a>
+            </div>
+            <button class="cart-btn" id="cartBtn">
+                Cart (0)
+            </button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Handcrafted with <span>Love</span></h1>
+            <p>Delicate pastries, soft cakes, and sweet moments delivered fresh to you every single day.</p>
+            <button class="btn primary"
+                onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Explore Menu</button>
+        </div>
+        <div class="hero-image fade-in-right">
+            <div class="image-wrapper">
+                <img src="assets/images/hero.png" alt="Delicious pink and white pastries">
+                <div class="decoration shape-1"></div>
+                <div class="decoration shape-2"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="bestsellers">
+        <div class="section-header fade-in">
+            <h2>Our Sweet Favorites</h2>
+            <p>Explore our wide range of premium baked goods</p>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 2rem;" class="fade-in">
+            <input type="text" id="menuSearch" class="search-input" placeholder="🔍 Search sweet treats...">
+        </div>
+
+        <div class="menu-tabs fade-in" id="menuTabs">
+            <!-- Tabs will be injected via JS -->
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Items injected via JS -->
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <div class="section-header fade-in">
+            <h2>Customer Love</h2>
+            <p>What our sweet family says about Crustora</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card fade-in-up">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"The Chocolate Bento Cake was the cutest and most delicious thing ever! Perfect
+                    for my sister's birthday, it was so soft and rich."</p>
+                <div class="reviewer">- @sneha_loves_cake</div>
+            </div>
+            <div class="review-card fade-in-up" style="animation-delay: 0.1s;">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"I ordered the Atta Bento Cake for my mom because it has no maida and she
+                    absolutely loved it. Healthy and so amazingly tasty!"</p>
+                <div class="reviewer">- @rahul_foodie</div>
+            </div>
+            <div class="review-card fade-in-up" style="animation-delay: 0.2s;">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"The Almond Brownies are insanely fudgy and perfectly balanced. The aesthetic
+                    packaging just made my day! Definitely ordering again."</p>
+                <div class="reviewer">- @ananya.bakes</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Crustora Logo"></a>
+            <p>Bringing sweetness to the world, one pastel pastry at a time.</p>
+            
+            <div class="newsletter-box">
+                <p>Join our sweet family for secret discounts & new flavor drops!</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your beautiful email" required>
+                    <button type="submit" class="btn primary">Subscribe</button>
+                </form>
+            </div>
+            <div style="margin-top: 1rem; color: var(--accent-dark); font-weight: 500;">
+                <p>📍 Krishna Nagar, East Delhi | 📞 +91 9891775379</p>
+                <div
+                    style="margin-top: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <span>To order, contact us on</span>
+                    <a href="https://instagram.com/crustora_"
+                        style="color: var(--accent-color); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; background: var(--bg-color); padding: 0.4rem 1rem; border-radius: 50px; border: 1px solid var(--primary-color); transition: all 0.3s ease;"
+                        onmouseover="this.style.background='var(--primary-color)'"
+                        onmouseout="this.style.background='var(--bg-color)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        @crustora_
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal Overlay -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-header">
+            <h2>Your Sweet Cart</h2>
+            <button id="closeCartBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">Your cart is empty. Add some sweetness!</div>
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="order-total-row">
+                <span>Total Items:</span>
+                <span id="cartTotalItems" style="font-weight: bold; color: var(--accent-dark);">0</span>
+            </div>
+            <button class="checkout-btn whatsapp-btn" id="whatsappCheckout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="margin-right:8px;">
+                    <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                </svg>
+                Order via WhatsApp
+            </button>
+            <button class="checkout-btn instagram-btn" id="instagramCheckout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="margin-right:8px;">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Order via Instagram
+            </button>
+            <p id="checkoutMsg"
+                style="text-align:center; font-size: 0.85rem; color: var(--text-light); margin-top: 10px; display: none;">
+            </p>
+        </div>
+    </div>
+
+    <!-- Orders Modal Overlay and Modal -->
+    <div id="ordersOverlay" class="cart-overlay"></div>
+    <div id="ordersModal" class="cart-modal">
+        <div class="cart-header">
+            <h2>My Past Orders</h2>
+            <button id="closeOrdersBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" id="ordersItemsContainer">
+            <div class="empty-cart-msg">Loading sweet memories...</div>
+        </div>
+    </div>
+
+    <!-- Profile Modal Overlay and Modal -->
+    <div id="profileOverlay" class="cart-overlay"></div>
+    <div id="profileModal" class="cart-modal" style="max-width: 450px;">
+        <div class="cart-header">
+            <h2>Your Sweet Profile</h2>
+            <button id="closeProfileBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-body" style="padding: 1.5rem; text-align: left;">
+            <div class="auth-form" style="max-width: 100%; box-shadow: none; padding: 0;">
+                <div style="margin-bottom: 1rem;">
+                    <label for="profileName" style="color: var(--accent-dark); font-weight: 600;">Full Name</label>
+                    <input type="text" id="profileName" placeholder="Your Name" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); font-family: var(--font-text);">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="profileEmail" style="color: var(--accent-dark); font-weight: 600;">Email Address</label>
+                    <input type="email" id="profileEmail" readonly style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); background: #f9f9f9; cursor: not-allowed; font-family: var(--font-text); color: #888;">
+                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 5px;">Emails cannot be changed securely from here.</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="profileDob" style="color: var(--accent-dark); font-weight: 600;">Date of Birth</label>
+                    <input type="date" id="profileDob" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); font-family: var(--font-text); color: var(--text-main);">
+                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 5px;">So we can surprise you on your special day! 🎂</p>
+                </div>
+                <button id="saveProfileBtn" class="btn primary" style="width: 100%;">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container"></div>
+
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+
+</html>
